@@ -1,21 +1,49 @@
-<h1>Ejemplo de coneccion a OMEKA</h1>
+<h1>BIBLICAL LANGUAGES LEARNING</h1>
 
 <!-- recorre todos los campos de los items para extraer el nombre -->
-{{#each item.element_texts}}
+<!--{{#each item.element_texts}}
+    <li>{{this.text}}</li>
+{{/each}}-->
+
+<h2>TODAS LAS COLECCIONES</h2>
+<!-- muestra la información de las colecciones -->
+<!--{{#each collection.element_texts}}
     <h1>{{this.text}}</h1>
+{{/each}} -->
+
+{{#each collections}}
+  <!-- recorre la lista de textos -->
+  {{#each this.element_texts}}
+    <!-- si el texto es 'Title' -->
+      {{#ifeq this.element.name 'Title'}}
+        <h4>{{this.text}}</h4>
+      {{/ifeq}}
+    <!-- si el texto es 'Subject' -->
+      {{#ifeq this.element.name 'Subject'}}
+        <p>Subject: {{this.text}}</p>
+      {{/ifeq}}
+    <!-- si el texto es 'Description' -->
+      {{#ifeq this.element.name 'Description'}}
+        <p>Description: {{this.text}}</p>
+      {{/ifeq}}
+    <!-- si el texto es 'Language' -->
+      {{#ifeq this.element.name 'Language'}}
+        <p>Language: {{this.text}}</p>
+      {{/ifeq}}
+  {{/each}}
 {{/each}}
 
-<h2>Colección</h2>
-<!-- muestra la información de las colecciones -->
-{{#each collection.element_texts}}
-    <h1>{{this.text}}</h1>
-{{/each}}
+
+<!--{{#each files}}
+    <h1>{{this.files_urls.thumbnail}}</h1>
+    <img src="{{files.0.file_urls.thumbnail}}" alt="">
+{{/each}}-->
 
 <!-- muestra la imágen en miniatura del elemento -->
-<img src="{{files.0.file_urls.thumbnail}}" alt="">
 
 
-<h1>TODOS LOS ITEMS</h1>
+
+<h2>TODOS LOS ITEMS</h2>
 <!-- recorre todos los elementos -->
 {{#each items}}
   <!-- recorre la lista de textos -->
@@ -26,11 +54,40 @@
       {{/ifeq}}
     <!-- si el texto es 'Subject' -->
       {{#ifeq this.element.name 'Subject'}}
-        <p>subject: {{this.text}}</p>
+        <p>Subject: {{this.text}}</p>
       {{/ifeq}}
     <!-- si el texto es 'Description' -->
       {{#ifeq this.element.name 'Description'}}
-        <p>des: {{this.text}}</p>
+        <p>Description: {{this.text}}</p>
+      {{/ifeq}}
+    <!-- si el texto es 'Language' -->
+      {{#ifeq this.element.name 'Language'}}
+        <p>Language: {{this.text}}</p>
       {{/ifeq}}
   {{/each}}
 {{/each}}
+
+<h2>TODAS LAS IMAGENES DEL ALFABETO HEBREO</h2>
+
+<img src="{{files.0.file_urls.thumbnail}}" alt="">
+<img src="{{files.1.file_urls.thumbnail}}" alt="">
+<img src="{{files.2.file_urls.thumbnail}}" alt="">
+<img src="{{files.3.file_urls.thumbnail}}" alt="">
+<img src="{{files.4.file_urls.thumbnail}}" alt="">
+<img src="{{files.5.file_urls.thumbnail}}" alt="">
+<img src="{{files.6.file_urls.thumbnail}}" alt="">
+<img src="{{files.7.file_urls.thumbnail}}" alt="">
+<img src="{{files.9.file_urls.thumbnail}}" alt="">
+<img src="{{files.10.file_urls.thumbnail}}" alt="">
+<img src="{{files.11.file_urls.thumbnail}}" alt="">
+<img src="{{files.12.file_urls.thumbnail}}" alt="">
+<img src="{{files.13.file_urls.thumbnail}}" alt="">
+<img src="{{files.14.file_urls.thumbnail}}" alt="">
+<img src="{{files.15.file_urls.thumbnail}}" alt="">
+<img src="{{files.16.file_urls.thumbnail}}" alt="">
+<img src="{{files.17.file_urls.thumbnail}}" alt="">
+<img src="{{files.18.file_urls.thumbnail}}" alt="">
+<img src="{{files.19.file_urls.thumbnail}}" alt="">
+<img src="{{files.20.file_urls.thumbnail}}" alt="">
+<img src="{{files.21.file_urls.thumbnail}}" alt="">
+<img src="{{files.22.file_urls.thumbnail}}" alt="">

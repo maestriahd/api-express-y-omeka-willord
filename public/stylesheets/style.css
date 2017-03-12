@@ -3,6 +3,18 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h1{
+  color: #7e4e0d;
+  font:30px "Helvetica";
+}
+
+h2{
+  color: #2011b7;
+  font:20px "Arial";
+}
+
+
 a {
   color: #00B7FF;
+  color: #30e30e;
 }
